@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANMS</title>
+    <link rel="icon" type="image/x-icon" href="https://bit.ly/44cO3ir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General reset and box model setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%; /* 1rem = 10px for easier scaling */
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #270707;
+            z-index: 1000;
+            padding: 2rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* This rounds the image into a circle */
+            object-fit: cover;  /* Ensures it fits within the circle */
+            margin-right: 1rem;
+            vertical-align: middle;
+        }
+
+        .navbar a {
+            font-size: 1.8rem;
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        /* Hero Section */
+        .home {
+            background: url("https://bit.ly/4jthWz0");
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 2rem;
+            padding-top: 130px;
+        }
+
+        .home .content {
+            background: rgba(4, 4, 4, 0.75);
+            padding: 5rem 4rem;
+            border-radius: 2rem;
+            text-align: left;
+            width: 100%;
+            max-width: 1000px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .home .content h3 {
+            font-size: 4rem;
+            color: #fff;
+            margin-bottom: 2rem;
+        }
+
+        .home .content p {
+            font-size: 2rem;
+            color: #eee;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .registration-form {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .registration-form label {
+            font-size: 1.6rem;
+            color: #fff;
+        }
+
+        .registration-form input {
+            padding: 1rem;
+            font-size: 1.6rem;
+            border: none;
+            border-radius: 0.8rem;
+            background-color: #fff;
+            color: #000;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .registration-form button {
+            padding: 1.2rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 1rem;
+            background-color: #270707;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.4s ease;
+        }
+
+        .registration-form button:hover {
+            background-color: #000;
+            color:#fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .navbar a {
+                font-size: 1.6rem;
+                margin-left: 1rem;
+            }
+
+            .content h3 {
+                font-size: 3.2rem;
+            }
+
+            .content p {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.5rem 3%;
+            }
+
+            .navbar {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+
+            .content {
+                padding: 3rem 2rem;
+            }
+
+            .content h3 {
+                font-size: 2.4rem;
+            }
+
+            .content p {
+                font-size: 1.4rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="https://bit.ly/44cO3ir" alt="Logo" class="logo-icon">ANMS
+        </a>
+        <nav class="navbar">
+            <a href="#">About</a>
+            <a href="#">Achievements</a>
+            <a href="#">Academics</a>
+            <a href="#">Help</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Welcome to ANMS!</h3>
+            <p>Authpur National Model H.S. School offers a nurturing and stimulating environment for your academic journey. With a commitment to holistic development, we provide quality education through experienced faculty and a well-rounded curriculum. Our school fosters critical thinking, creativity, and character development, preparing students for future success. We boast excellent facilities for sports, arts, and sciences, ensuring a comprehensive learning experience. Join the Authpur National Model H.S. School family and embark on a path of academic excellence and personal growth!</p>
+            <form class="registration-form" onsubmit="return false;">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+    
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="panel-i" id="panel-i">
+    </section>
+</body>
+</html>
